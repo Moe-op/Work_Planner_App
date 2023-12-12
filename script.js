@@ -21,7 +21,8 @@ $(document).ready(function () {
       let savedEvent = localStorage.getItem(`event-${hour}`);
       if (savedEvent) {
         textArea.val(savedEvent);
-        timeBlock.addClass("event-saved"); // Add a class for styling purposes
+        timeBlock.addClass("event-saved"); // Added a class for styling purposes to turn green once saved
+        console.log(`Event found for hour ${hour}: ${savedEvent}`);
       }
   
       let saveBtn = $("<button>").addClass("col-1 saveBtn").html('<i class="fas fa-save"></i>');
@@ -30,7 +31,8 @@ $(document).ready(function () {
       saveBtn.on("click", function () {
         let eventText = textArea.val();
         localStorage.setItem(`event-${hour}`, eventText);
-        timeBlock.addClass("event-saved"); // Add a class when an event is saved
+        timeBlock.addClass("event-saved"); // Added a class for styling purposes to turn green once saved
+        console.log(`Event saved for hour ${hour}: ${eventText}`);
       });
   
       // Append elements to time block and time blocks to the container

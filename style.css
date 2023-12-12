@@ -1,7 +1,6 @@
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
-  line-height: 1;
 }
 
 textarea {
@@ -15,20 +14,37 @@ textarea {
 
 header {
   text-align: center;
-  background-color: transparent;
-  color: black;
-  border-radius: 0;
-  border-bottom: 10px solid black;
-  padding: 60px;
+  background-color: #343a40; /* Dark background color */
+  color: #ffffff; /* Light text color */
+  padding: 20px;
 }
 
-.description {
-  white-space: pre-wrap;
+.container {
+  margin-top: 20px;
 }
 
 .time-block {
+  border: 1px solid #dee2e6; /* Light border color */
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.hour {
+ /* background-color: #f8f9fa;  Light background color for hours */
+  padding: 10px;
   text-align: center;
-  border-radius: 15px;
+  font-weight: bold;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.description {
+  background-color: #ffffff; /* White background for text area */
+  color: #495057; /* Dark text color */
+  border-top: black 1px solid;
+  resize: none;
+  padding: 10px;
+  height: 100px;
+  border-radius: 0 0 10px 10px;
 }
 
 .row {
@@ -37,14 +53,9 @@ header {
   border-top: 1px solid white;
 }
 
-.hour {
-  background-color: #ffffff;
-  color: #000000;
-  border-top: 1px dashed #000000;
-}
 
 .past {
-  background-color: #d3d3d3;
+  background-color: #f37e7e; 
   color: white;
 }
 
@@ -54,24 +65,29 @@ header {
 }
 
 .future {
-  background-color: #77dd77;
+  background-color: #c8e6c9;
   color: white;
 }
 
 .saveBtn {
-  border-left: 1px solid black;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  background-color: #06aed5;
-  color: white;
+  border: none;
+  border-radius: 0 0 10px 10px;
+  cursor: pointer;
+  background-color: #007bff; /* Blue for save button */
+  color: #ffffff;
+
 }
 
+.saveBtn i {
+  font-size: 18px;
+}
 .saveBtn i:hover {
+  background-color: #0056b3; /* Darker blue on hover */
   font-size: 20px;
   transition: all 0.3s ease-in-out;
 }
 
 .event-saved {
-  background-color: #77dd77; /* Green color for saved events */
+  background-color: #77dd77 !important; /* Green color for saved events */ 
   color: white;
 }
